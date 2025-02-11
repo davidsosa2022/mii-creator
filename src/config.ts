@@ -145,35 +145,35 @@ export const Config = {
 
     <div class="flex-group" style="justify-content:flex-start">
       <div class="flex-group" style="gap:0px;justify-content:flex-start">
-        <img draggable="false" width=96 height=96 src="${baseURL}.png?type=variableiconbody&data=080037030d020531020c030105040a0209000001000a011004010b0100662f04000214031603140d04000a020109&shaderType=switch&width=96&source=update&characterYRotate=8&bodyType=switch">
+        <img class="mii-card-face" draggable="false" width=96 height=96 src="${baseURL}.png?type=variableiconbody&data=080037030d020531020c030105040a0209000001000a011004010b0100662f04000214031603140d04000a020109&shaderType=switch&width=96&source=update&characterYRotate=8&bodyType=switch">
         <div class="col" style="gap:12px;flex:1">
           <small>Arian <a href="https://github.com/ariankordi">(@ariankordi)</a></small>
           <div>Wrote code for the new QR code feature, helped with Git, debugging, advice</div>
         </div>
       </div>
       <div class="flex-group" style="gap:0px;justify-content:flex-start">
-        <img draggable="false" width=96 height=96 src="${baseURL}.png?type=variableiconbody&data=00070e3c4554575c616c6872818b909da0b1b7bec3cad0d78f93a1b1c0c78ce8f0f8fdf2f8f3f7ebebf6fdfcfffffb&shaderType=switch&width=96&source=update&characterYRotate=8&bodyType=switch">
+        <img class="mii-card-face" draggable="false" width=96 height=96 src="${baseURL}.png?type=variableiconbody&data=00070e3c4554575c616c6872818b909da0b1b7bec3cad0d78f93a1b1c0c78ce8f0f8fdf2f8f3f7ebebf6fdfcfffffb&shaderType=switch&width=96&source=update&characterYRotate=8&bodyType=switch">
         <div class="col" style="gap:12px;flex:1">
           <small>Timothy <a href="https://github.com/Timiimiimii">(@Timimimi)</a></small>
           <div>Implemented the new <code>.charinfo</code> <a href="https://github.com/datkat21/mii-creator/pull/15">export format</a></div>
         </div>
       </div>
       <div class="flex-group" style="gap:0px;justify-content:flex-start">
-        <img draggable="false" width=96 height=96 src="${baseURL}.png?type=variableiconbody&data=00070e3b3f3c4649555e5c6675777a7a7f7e818890979ea5b4b7bebbbac188bdc6ced4ccd6cccfe3f5f8fffcff0513&shaderType=switch&width=96&source=update&characterYRotate=8&bodyType=switch">
+        <img class="mii-card-face" draggable="false" width=96 height=96 src="${baseURL}.png?type=variableiconbody&data=00070e3b3f3c4649555e5c6675777a7a7f7e818890979ea5b4b7bebbbac188bdc6ced4ccd6cccfe3f5f8fffcff0513&shaderType=switch&width=96&source=update&characterYRotate=8&bodyType=switch">
         <div class="col" style="gap:12px;flex:1">
           <small>obj <a href="https://x.com/objecty_twitt">(@objecty)</a></small>
           <div>Helped with designing some new icons</div>
         </div>
       </div>
       <div class="flex-group" style="gap:0px;justify-content:flex-start">
-        <img draggable="false" width=96 height=96 src="${baseURL}.png?type=variableiconbody&data=0800450308040402020c0308060406020a0001000006000804000a0800326702010314031304190d04000a040109&shaderType=switch&width=96&source=update&characterYRotate=8&bodyType=switch">
+        <img class="mii-card-face" draggable="false" width=96 height=96 src="${baseURL}.png?type=variableiconbody&data=0800450308040402020c0308060406020a0001000006000804000a0800326702010314031304190d04000a040109&shaderType=switch&width=96&source=update&characterYRotate=8&bodyType=switch">
         <div class="col" style="gap:12px;flex:1">
           <small>David J. <a href="https://x.com/dwyazzo90">(@dwyazzo90)</a></small>
           <div>Provided suggestions and ideas</div>
         </div>
       </div>
       <div class="flex-group" style="gap:0px;justify-content:flex-start">
-        <img draggable="false" width=96 height=96 src="${baseURL}.png?type=variableiconbody&data=00070e283208131d43484b524c515a5a606f75838a919ea5b4b7bebbb3ba8bced1d8e1fc03171d191b262d2e313745&shaderType=switch&width=96&source=update&characterYRotate=8&bodyType=switch">
+        <img class="mii-card-face" draggable="false" width=96 height=96 src="${baseURL}.png?type=variableiconbody&data=00070e283208131d43484b524c515a5a606f75838a919ea5b4b7bebbb3ba8bced1d8e1fc03171d191b262d2e313745&shaderType=switch&width=96&source=update&characterYRotate=8&bodyType=switch">
         <div class="col" style="gap:12px;flex:1">
           <small>justcamtro <a href="https://x.com/justcamtro">(@justcamtro)</a></small>
           <div>Tested the new update and gave feedback</div>

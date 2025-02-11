@@ -8,7 +8,7 @@ import { miiCreateDialog } from "./_dialog";
 
 export const newFromNNID = async () => {
   const input = await Modal.input(
-    "Nintendo Network ID",
+    "Get Mii from Nintendo Network ID",
     "Enter NNID of user..",
     "Username",
     "body",
@@ -45,7 +45,7 @@ export const newFromNNID = async () => {
 
 export const newFromPNID = async () => {
   const input = await Modal.input(
-    "Pretendo Network ID",
+    "Get Mii from Pretendo Network ID",
     "Enter PNID of user..",
     "Username",
     "body",

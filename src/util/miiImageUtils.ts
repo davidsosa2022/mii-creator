@@ -277,9 +277,12 @@ export function createMiiCard(
       gap: "0",
       "justify-content": "flex-start",
       "text-align": "left",
+      "padding-bottom": "10px",
+      "border-bottom": "2px dashed rgb(221 221 221)"
     })
     .appendMany(
       new Html("img")
+      .class("mii-card-face")
         .attr({
           width: 96,
           draggable: "false",
@@ -289,8 +292,7 @@ export function createMiiCard(
               studioData
             )}&type=variableiconbody&verifyCharInfo=0&shaderType=switch&width=96&source=credits&characterYRotate=8&bodyType=switch&` +
             extra,
-        })
-        .style({ width: "96px", height: "96px" }),
+        }),
       new Html("div")
         .class("col")
         .style({ gap: "12px", flex: "1" })
@@ -333,6 +335,7 @@ export function createIconCard(
       gap: "0",
       "justify-content": "flex-start",
       "text-align": "left",
+      "border-bottom": "2px dashed rgb(221, 221, 221)",
     })
     .appendMany(
       new Html("div").html(icon).style({ width: "96px", height: "96px" }),

@@ -16,7 +16,7 @@ export const newFromScratch = () => {
   }
 
   Modal.modal(
-    "Create New",
+    "Create new Mii from Scratch",
     "Select the Mii's gender",
     "body",
     {

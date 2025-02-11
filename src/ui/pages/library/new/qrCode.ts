@@ -29,7 +29,7 @@ export const newFromQRCode = async () => {
   m.qs(".modal-body")!
     .qsa("*")!
     .forEach((item) => item!.cleanup());
-  m.qs(".modal-content")?.styleJs({ maxHeight: "100%", maxWidth: "600px" });
+  m.qs(".modal-content")?.styleJs({ maxWidth: "600px"});
 
   mb.appendMany(
     // camera stuff container
@@ -59,6 +59,7 @@ export const newFromQRCode = async () => {
       new Html("input").attr({
         type: "file",
         id: "file-input",
+        class: "qr-photo-upload",
         accept: "image/*",
       })
     )

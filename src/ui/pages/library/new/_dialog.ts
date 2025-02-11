@@ -23,17 +23,17 @@ export const miiCreateDialog = () => {
       },
     },
     {
-      text: "QR Code",
+      text: "Scan QR Code",
       callback: () => {
         newFromQRCode();
       },
     },
     {
-      text: "FFSD/MiiCreator data",
+      text: "From FFSD/Mii Creator data",
       callback: () => {
         let id: string;
         let modal = Modal.modal(
-          "Import FFSD/MiiCreator data",
+          "From FFSD/Mii Creator data",
           "",
           "body",
           {
@@ -89,23 +89,23 @@ export const miiCreateDialog = () => {
       },
     },
     {
-      text: "Enter NNID/PNID",
+      text: "From a NNID/PNID",
       callback: () => {
         Modal.modal(
-          "Enter NNID/PNID",
+          "From a NNID/PNID",
           "Select a service to look up",
           "body",
           {
             text: "Cancel",
           },
           {
-            text: "Enter Nintendo Network ID",
+            text: "Nintendo",
             callback(e) {
               newFromNNID();
             },
           },
           {
-            text: "Enter Pretendo Network ID",
+            text: "Pretendo",
             callback(e) {
               newFromPNID();
             },

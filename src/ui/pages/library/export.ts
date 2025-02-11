@@ -13,14 +13,14 @@ import Html from "@datkat21/html";
 
 export const miiExportData = async (mii: MiiLocalforage, miiData: Mii) => {
   Modal.modal(
-    "Export Mii",
+    "Export/Download Data",
     "How would you like to save the Mii?",
     "body",
     {
       text: "Cancel",
     },
     {
-      text: "Save MiiCreator data",
+      text: "Save Mii Creator data",
       async callback() {
         const blob = new Blob([miiData.encode()]);
         const url = URL.createObjectURL(blob);

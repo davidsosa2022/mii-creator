@@ -7,8 +7,10 @@ import Mii from "../../../../external/mii-js/mii";
 import Modal from "../../../components/Modal";
 import { _shutdown, Library, miiIconUrl, newMiiId } from "../../Library";
 import { miiCreateDialog } from "./_dialog";
+import { importMiiConfirmation } from "../../library/importDialog";
 
 export const newFromLookalike = async () => {
+  var specialMii = false;
   var m = Modal.modal(
     "Choose a look-alike",
     "",
@@ -16,6 +18,7 @@ export const newFromLookalike = async () => {
     {
       text: "Cancel",
       callback(e) {
+        if (specialMii) {return;}
         miiCreateDialog();
       },
     },
@@ -52,6 +55,31 @@ export const newFromLookalike = async () => {
         "All of the options here are what Nintendo originally programmed in. Please let me know if you want more options added."
       )
   );
+
+  // hey stop snooping! you'll ruin the fun :(
+  new Html("a")
+    .text("secret?")
+    .style({
+      "font-size": "8px",
+      opacity: "1",
+      cursor: "pointer",
+      position: "absolute",
+      top: "5px",
+      right: "10px",
+    })
+    .on("click", (e) => {
+      specialMii = true;
+      m.qs("button")?.elm.click();
+
+      const mii = new Mii(
+        Buffer.from(
+          "AwEAMAAAAAAAAAAAgP9wmS/5Fhz6rQAAASxNAGkAaQBuAGEAUgBpAGkAbgBhAEBAEgBwAC1KQxgANEYWYRAXaAwAACkAUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHxOAAgACAAAAAAAAGQA",
+          "base64"
+        )
+      );
+      importMiiConfirmation(mii, "100percentglimmer (miiTiMe)");
+    })
+    .appendTo(group);
 
   new Html("button")
     .class("primary")

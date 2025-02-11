@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mii Creator</title>
-    <meta property="og:title" content="Mii Creator - Web-based Mii editor" />
-    <meta
-      property="og:description"
-      content="Create and share Mii characters online with just a few clicks!"
-    />
-    <meta
-      name="description"
-      content="Create and share Mii characters online with just a few clicks!"
-    />
-    <meta
-      name="keywords"
-      content="Mii, Mii Creator, Nintendo, Pretendo, FFL, Wii U, 3DS, Mii Maker, Web Mii Maker"
-    />
-    <meta property="theme-color" content="#484848" />
-    <meta property="og:site_name" content="mii.nxw.pw" />
-    <meta property="og:image" content="https://mii.nxw.pw/assets/images/preview_dark.png" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:image" content="https://mii.nxw.pw/assets/images/preview_dark.png" />
-    <style>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mii Creator</title>
+  <meta property="og:title" content="Mii Creator - Web-based Mii editor" />
+  <meta property="og:description" content="Create and share Mii characters online with just a few clicks!" />
+  <meta name="description" content="Create and share Mii characters online with just a few clicks!" />
+  <meta name="keywords" content="Mii, Mii Creator, Nintendo, Pretendo, FFL, Wii U, 3DS, Mii Maker, Web Mii Maker" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="Mii Creator - Web-based Mii editor" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="/mstile-310x310.png" />
+
+  <meta property="theme-color" content="#484848" />
+  <meta property="og:site_name" content="mii.nxw.pw" />
+  <meta property="og:image" content="/assets/images/preview_dark.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:image" content="/assets/images/preview_dark.png" />
+  <style>
+    html,
+    body {
+      background-color: white !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+
       html,
       body {
-        background-color: white !important;
+        background-color: black !important;
       }
-      @media (prefers-color-scheme: dark) {
-        html,
-        body {
-          background-color: black !important;
-        }
-      }
-    </style>
-    <link rel="stylesheet" href="dist/main.css" />
-  </head>
-  <body>
-    <script>
-      const global = {};
-      const process = { env: { NODE_DEBUG: false } };
-    </script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/spectorjs@0.9.30/dist/spector.bundle.js"></script> -->
-    <script type="module" src="dist/main.js"></script>
-  </body>
+    }
+  </style>
+  <link rel="stylesheet" href="dist/main.css" />
+</head>
+
+<body>
+  <script>
+    const global = {};
+    const process = { env: { NODE_DEBUG: false } };
+  </script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/spectorjs@0.9.30/dist/spector.bundle.js"></script> -->
+  <script type="module" src="dist/main.js"></script>
+</body>
+
 </html>

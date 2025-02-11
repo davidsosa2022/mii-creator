@@ -2,7 +2,9 @@
 import localforage from "localforage";
 
 const langValue = (await localforage.getItem("language")) as string;
+//navigator.language returns the users language.
 let lang = langValue || "en_US";
+let browserLang = navigator.language;
 let strings: Record<string, any> = {};
 
 export const langList = ["en_US"];

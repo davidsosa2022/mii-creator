@@ -358,7 +358,9 @@ body {
   --label: #666666;
   --stroke: #dddddd;
   --stroke-dim: #e8e8e8;
-  --stroke-rgb: 221, 221, 221;
+  --stroke-rgb: 221,
+  221,
+  221;
   --container: #eeeeee77;
   --container-solid: #eeeeee;
   --sub-container: #ececec77;
@@ -468,6 +470,11 @@ button.selected {
 button.selected-setting {
   border: 0.1rem solid var(--selection-color);
   background-color: var(--selection-color);
+}
+
+button.selected-setting:hover {
+  background-color: rgb(162, 215, 255) !important;
+  border: 0.1rem solid rgb(162, 215, 255) !important;
 }
 
 .h4 {
@@ -589,6 +596,20 @@ h6 {
   animation: spinInPlaceAndCry 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
+.mii-card-face {
+  background: rgba(255, 255, 255, 0.7);
+  width: 74px;
+  height: 74px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 630px) {
+  .mii-card-face {
+    width: 65px;
+    height: 65px;
+  }
+}
 .modal-selectable {
   position: fixed;
   top: 0;
@@ -623,11 +644,15 @@ h6 {
   display: flex;
   flex-direction: column;
   border: 2px solid var(--stroke);
+  border-top: 2px solid #ededed;
   border-radius: 8px;
-  min-width: 200px;
+  min-width: 400px;
   min-height: 140px;
-  max-height: 440px;
+  max-width: 840px;
+  max-height: 480px;
   overflow: clip;
+  margin-left: 10px;
+  margin-right: 10px;
   animation: shortSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .modal .modal-content .modal-header {
@@ -636,7 +661,7 @@ h6 {
   justify-content: center;
   background-color: var(--hover);
   flex-shrink: 0;
-  border-radius: 5px 5px 0 0;
+  box-shadow: inset 0px -1px #b5b5b5;
   position: relative;
 }
 .modal .modal-content .modal-header .close-button {
@@ -657,11 +682,13 @@ h6 {
 }
 .modal .modal-content .modal-body {
   padding: 16px 18px;
-  background-color: var(--root);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
   height: 100%;
   flex: 1;
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 16px;
   border-radius: 0 0 5px 5px;
   overflow: auto;
@@ -698,6 +725,17 @@ h6 {
   margin: 0 !important;
 }
 
+@media screen and (max-width: 430px) {
+  .modal .modal-content {
+    min-width: revert;
+    max-width: revert;
+    width: 100%;
+  }
+}
+#cam-list, .qr-photo-upload {
+  width: 100%;
+}
+
 .modal-body.force-start .flex-group {
   justify-content: flex-start !important;
 }
@@ -708,6 +746,7 @@ h6 {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+  z-index: 1;
 }
 .flex-group span {
   text-align: center;
@@ -724,6 +763,21 @@ h6 {
   padding: 0 !important;
 }
 
+input::file-selector-button {
+  font: inherit;
+  background-color: var(--root);
+  color: var(--text);
+  border: 2px solid var(--stroke);
+  border-radius: 8px;
+  min-width: 64px;
+  padding: 8px 14px;
+  gap: 6px;
+}
+
+input::file-selector-button:hover {
+  background-color: var(--focus);
+}
+
 button {
   font: inherit;
   background-color: var(--root);
@@ -738,7 +792,7 @@ button {
   align-items: center;
   gap: 6px;
 }
-button:hover {
+button:not([disabled]):not(.danger):not(.primary):not(.close-button):hover {
   background-color: var(--focus);
 }
 button, button:focus {
@@ -907,6 +961,10 @@ select[type=checkbox]:checked {
   .ui-base .tab-list .tab.tab-square.active {
     box-shadow: 0 0 0 0.3rem var(--selection-color);
   }
+  .ui-base .tab-list .tab.tab-square.tab-save {
+    min-width: revert;
+    padding: 0 12px;
+  }
   .ui-base .tab-list .tab.tab-rectangle {
     min-width: 64px;
     padding: 14px 24px;
@@ -980,7 +1038,7 @@ select[type=checkbox]:checked {
   display: flex;
   background-color: var(--container);
   padding: 8px;
-  gap: 8px;
+  gap: 12px;
 }
 .tab-list .tab {
   display: flex;
@@ -1083,6 +1141,9 @@ select[type=checkbox]:checked {
 .tab-content .feature-set-group .feature-switch {
   display: flex;
 }
+.tab-content .feature-set-group .feature-switch button {
+  min-height: 45px;
+}
 .tab-content .feature-set-group .feature-switch .feature-switch-left {
   border-radius: 8px 0 0 8px;
 }
@@ -1098,7 +1159,6 @@ select[type=checkbox]:checked {
   height: max-content;
   justify-content: center;
   align-items: center;
-  border-right-width: 1px;
 }
 .tab-content .feature-set-group .feature-switch .feature-switch-left.active,
 .tab-content .feature-set-group .feature-switch .feature-switch-right.active {
@@ -1123,14 +1183,22 @@ select[type=checkbox]:checked {
   justify-content: center;
   align-items: center;
 }
+.tab-content .feature-set-group .feature-slider span:hover,
+.tab-content .feature-set-group .feature-range span:hover {
+  background-color: var(--hover);
+}
 .tab-content .feature-set-group .feature-item {
-  min-width: 52px;
-  min-height: 52px;
+  min-width: 72px;
+  min-height: 72px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   cursor: pointer;
+}
+.tab-content .feature-set-group .feature-item svg {
+  width: 72px;
+  height: 72px;
 }
 .tab-content .feature-set-group .feature-item:hover {
   background-color: var(--hover);
@@ -1171,6 +1239,7 @@ select[type=checkbox]:checked {
   height: 100%;
 }
 .mii-library .library-sidebar {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -1255,12 +1324,15 @@ select[type=checkbox]:checked {
   }
   .mii-library .library-sidebar {
     flex-direction: row;
+    padding-top: 3rem;
   }
   .mii-library .library-sidebar button {
     flex: 1;
   }
   .mii-library .library-sidebar h1 {
-    display: none;
+    position: absolute;
+    top: 0.55em;
+    font-size: 1.25em;
   }
   .mii-library .library-sidebar .sidebar-buttons {
     flex: 1;

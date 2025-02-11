@@ -389,10 +389,6 @@ export async function Library(highlightMiiId?: string) {
                   { text: "OK" }
                 );
                 m.qs(".modal-body span")!.cleanup();
-                m.qs(".modal-content")!.style({
-                  "max-width": "100%",
-                  "max-height": "100%",
-                });
                 const mb = m.qs(".modal-body")!;
                 m.qs(".modal-content")!.style({ position: "relative" });
                 const container = new Html("div").class("col").prependTo(mb);
@@ -401,7 +397,6 @@ export async function Library(highlightMiiId?: string) {
                   .style({
                     "font-size": "20px",
                     "flex-shrink": "0",
-                    "margin-bottom": "-16px",
                   })
                   .prependTo(mb);
 
@@ -410,7 +405,7 @@ export async function Library(highlightMiiId?: string) {
                   .text("secret?")
                   .style({
                     "font-size": "10px",
-                    opacity: "0.3",
+                    opacity: "0",
                     cursor: "pointer",
                     position: "absolute",
                     bottom: "10px",
@@ -474,7 +469,7 @@ export async function Library(highlightMiiId?: string) {
           ),
           AddButtonSounds(
             new Html("button")
-              .text("Help/Contact")
+              .text("Contact")
               .on("click", async () => {
                 var m = Modal.modal(
                   "Contact",
@@ -484,10 +479,6 @@ export async function Library(highlightMiiId?: string) {
                   { text: "OK" }
                 );
                 m.qs(".modal-body span")!.cleanup();
-                m.qs(".modal-content")!.style({
-                  "max-width": "100%",
-                  "max-height": "100%",
-                });
                 const mb = m.qs(".modal-body")!;
                 m.qs(".modal-content")!.style({ position: "relative" });
                 const container = new Html("div")
@@ -499,7 +490,7 @@ export async function Library(highlightMiiId?: string) {
                   .style({
                     "font-size": "20px",
                     "flex-shrink": "0",
-                    "margin-bottom": "-16px",
+                    "margin-bottom": "-10px",
                   })
                   .prependTo(mb);
 
@@ -508,7 +499,7 @@ export async function Library(highlightMiiId?: string) {
                   .text("secret?")
                   .style({
                     "font-size": "10px",
-                    opacity: "0.3",
+                    opacity: "0",
                     cursor: "pointer",
                     position: "absolute",
                     bottom: "10px",
@@ -586,7 +577,7 @@ export const miiFFSDWarning = async (miiData: Mii) => {
   if (miiData.hasExtendedColors() === true) {
     let result = await Modal.prompt(
       "Warning",
-      'This Mii is using extended Switch colors and/or MiiCreator features, but those features will be lost when converting to FFSD.\nUse "Save MiiCreator data" or "Save CharInfo (Switch) data" if you want to keep the data.\nIs this OK?',
+      'This Mii is using extended Switch colors and/or Mii Creator features, but those features will be lost when converting to FFSD.\nUse "Save Mii Creator data" or "Save CharInfo (Switch) data" if you want to keep the data.\nIs this OK?',
       "body",
       false
     );

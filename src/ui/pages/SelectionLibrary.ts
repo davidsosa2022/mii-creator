@@ -224,11 +224,11 @@ const miiCreateDialog = () => {
       callback: miiCreateRandom,
     },
     {
-      text: "Import FFSD/MiiCreator data",
+      text: "Import FFSD/Mii Creator data",
       callback: () => {
         let id: string;
         let modal = Modal.modal(
-          "Import FFSD/MiiCreator data",
+          "Import FFSD/Mii Creator data",
           "",
           "body",
           {

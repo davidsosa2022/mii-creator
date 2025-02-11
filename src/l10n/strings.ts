@@ -108,8 +108,7 @@ export type Strings = {
         description_no_changes: string;
         description_changes_made: string;
       };
-      warning_custom: `%custom% is a CUSTOM property, and will not transfer to any other data formats.
-It is purely visual and provided for the ability to use in renders.`;
+      warning_custom: string;
     };
     saveData: {
       title: string;

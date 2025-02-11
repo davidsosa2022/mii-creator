@@ -2,6 +2,7 @@ import localforage from "localforage";
 import { MiiEditor } from "../../../class/MiiEditor";
 import type Mii from "../../../external/mii-js/mii";
 import Modal from "../../components/Modal";
+import Loader from "../../components/Loader";
 import {
   _shutdown,
   Library,
@@ -185,6 +186,7 @@ export const miiSelect = (
           width: "180px",
           height: "240px",
           margin: "-18px auto 0 auto",
+          "-webkit-box-reflect": "below -15% linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 0%,  rgba(0, 0, 0, 0.0) 50%, rgba(0, 0, 0, 0.0) 50%, rgba(0, 0, 0, 0.1) 100%)"
         })
     );
   };
